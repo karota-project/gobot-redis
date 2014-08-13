@@ -1,20 +1,20 @@
 package redis
 
 import (
-  "github.com/hybridgroup/gobot"
-  "testing"
+	"github.com/hybridgroup/gobot"
+	"testing"
 )
 
 func initTestRedisAdaptor() *RedisAdaptor {
-  return NewRedisAdaptor("myAdaptor")
+	return NewRedisAdaptor("myAdaptor")
 }
 
 func TestRedisAdaptorConnect(t *testing.T) {
-  a := initTestRedisAdaptor()
-  gobot.Expect(t, a.Connect(), true)
+	a := initTestRedisAdaptor()
+	gobot.Expect(t, a.Connect(), true)
 }
 
 func TestRedisAdaptorFinalize(t *testing.T) {
-  a := initTestRedisAdaptor()
-  gobot.Expect(t, a.Finalize(), true)
+	a := initTestRedisAdaptor()
+	gobot.Expect(t, a.Finalize(), true)
 }
