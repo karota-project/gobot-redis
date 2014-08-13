@@ -6,7 +6,7 @@ import (
 )
 
 func initTestRedisAdaptor() *RedisAdaptor {
-	return NewRedisAdaptor("myAdaptor")
+	return NewRedisAdaptor("myAdaptor", ":6379")
 }
 
 func TestRedisAdaptorConnect(t *testing.T) {

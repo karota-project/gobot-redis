@@ -6,7 +6,7 @@ import (
 )
 
 func initTestRedisDriver() *RedisDriver {
-	return NewRedisDriver(NewRedisAdaptor("myAdaptor"), "myDriver")
+	return NewRedisDriver(NewRedisAdaptor("myAdaptor", ":6379"), "myDriver")
 }
 
 func TestRedisDriverStart(t *testing.T) {
